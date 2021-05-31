@@ -1,0 +1,28 @@
+{
+  "name": "palettebot",
+  "version": "1.0.0",
+  "description": "A Twitter bot that posts a daily color palette.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spbail/palettebot.git"
+  },
+  "keywords": [
+    "javascript",
+    "twitter",
+    "experiment"
+  ],
+  "author": "Sam Bail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spbail/palettebot/issues"
+  },
+  "homepage": "https://github.com/spbail/palettebot#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "twit": "^2.2.11"
+  }
+}
