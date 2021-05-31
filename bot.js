@@ -49,5 +49,6 @@ function postTweetWithImage(statusText, imgPath) {
 }
 
 
-
+// Post, then exit - this is run every interval by the Heroku scheduler
 postTweetWithImage('Beep beep, here\'s a pretty color palette for you!', './palette1.jpg');
+process.exitCode = 0;
