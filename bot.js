@@ -122,11 +122,21 @@ function postTweetWithImage(statusText, imgPath) {
     })
 }
 
+function getGreeting() {
+    var date = new Date()
+    var curHour = date.getHours()
+
+    if (curHour < 12) {
+        return 'Have a lovely day!'
+    } else {
+        console.log('Have a lovely evening!')
+    }
+}
 
 // Post, then exit - this is run every interval by the Heroku scheduler
 [imgPath, description] = getPaletteImage();
 postTweetWithImage('Beep beep, here\'s a pretty color palette for you! ' +
-    description + '\n\nHave a lovely day!' +
+    description + '\n\n' + getGreeting() +
     '\n\n#twitterbot #colorpalette #colors #palette #prettycolors', imgPath
 );
 process.exitCode = 0;
