@@ -22,6 +22,10 @@
   },
   "homepage": "https://github.com/spbail/palettebot#readme",
   "dependencies": {
+    "canvas": "^2.8.0",
+    "color-scheme": "^1.0.1",
+    "concretejs": "^3.0.5",
+    "date-fns": "^2.22.1",
     "dotenv": "^10.0.0",
     "twit": "^2.2.11"
   }
