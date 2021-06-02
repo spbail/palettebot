@@ -129,7 +129,7 @@ function getGreeting() {
     if (curHour < 12) {
         return 'Have a lovely day!'
     } else {
-        console.log('Have a lovely evening!')
+        return 'Have a lovely evening!'
     }
 }
 
