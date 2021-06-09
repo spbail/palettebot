@@ -17,21 +17,30 @@ function getPaletteImage() {
     const fs = require('fs')
     const { createCanvas } = require('canvas')
 
-    const canvWidth = 400
-    const canvHeight = 230
+    const canvWidth = 600
+    const canvHeight = 318
 
     const canvas = createCanvas(canvWidth, canvHeight)
     const ctx = canvas.getContext('2d')
 
-    var width = 72;
-    var height = 190;
     var offset = 20;
+    var width = (canvWidth - 2 * offset) / 5;
+    var height = canvHeight - (2 * offset);
 
     var [colors, description] = getRandomPalette();
 
+    ctx.font = '16px Courier New';
+
     colors.forEach(function(col, i) {
+
+        // Fill a rectangle for each color
         ctx.fillStyle = col;
         ctx.fillRect((width * i) + offset, offset, width, height);
+
+        // Add the color codes as text
+        ctx.textAlign = 'center';
+        ctx.fillStyle = '#000';
+        ctx.fillText(col, ((width * i) + offset) + width / 2, height + offset / 2);
     })
 
     const ts = new Date().toISOString().replace(/:/g, '');
